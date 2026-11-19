@@ -1,0 +1,8 @@
+.tools/
+.lab/
+__pycache__/
+*.pyc
+config/*.local.json
+*.password
+*.secret
+.env
