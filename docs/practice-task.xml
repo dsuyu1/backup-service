@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo><Description>VISI backup lab candidate. Disabled until Windows and cloud acceptance tests pass. Schedule uses the Windows machine's local timezone.</Description></RegistrationInfo>
+  <Triggers><CalendarTrigger><StartBoundary>2026-11-18T21:00:00</StartBoundary><Enabled>true</Enabled><ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay></CalendarTrigger></Triggers>
+  <Principals><Principal id="System"><UserId>S-1-5-18</UserId><LogonType>ServiceAccount</LogonType><RunLevel>HighestAvailable</RunLevel></Principal></Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>true</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>
+    <AllowStartOnDemand>true</AllowStartOnDemand><Enabled>false</Enabled>
+    <Hidden>false</Hidden><WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT28920S</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context="System"><Exec><Command>C:\Program Files\PowerShell\7\pwsh.exe</Command><Arguments>-NoLogo -NoProfile -NonInteractive -File &quot;C:\ProgramData\VISI-Backup\Invoke-VisiBackup.ps1&quot; -ConfigFile &quot;C:\ProgramData\VISI-Backup\backup.json&quot;</Arguments><WorkingDirectory>C:\ProgramData\VISI-Backup</WorkingDirectory></Exec></Actions>
+</Task>

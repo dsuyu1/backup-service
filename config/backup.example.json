@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "jobId": "practice-frontdesk",
+  "kopiaPath": "C:\\Program Files\\Kopia\\kopia.exe",
+  "expectedKopiaVersion": "0.23.1",
+  "repositoryConfig": "C:\\ProgramData\\VISI-Backup\\repository.config",
+  "stateDirectory": "C:\\ProgramData\\VISI-Backup\\state",
+  "pingUrl": "https://ping.example.org/ping/00000000-0000-0000-0000-000000000000",
+  "pingTimeoutSeconds": 10,
+  "maxRunSeconds": 28800,
+  "sources": [
+    {
+      "path": "D:\\Shared",
+      "minimumFileCount": 1,
+      "requiredFiles": ["backup-scope-check.txt"]
+    }
+  ]
+}
